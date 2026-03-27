@@ -1,7 +1,6 @@
 .venv/
 __pycache__/
 *.pyc
-*.duckdb
 target/
 dbt_packages/
 .ipynb_checkpoints/

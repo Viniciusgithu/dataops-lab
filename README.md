@@ -3,22 +3,6 @@
 Pipeline de dados local para ingestão de pedidos CSV em um banco analítico DuckDB — base para evolução com práticas de DataOps.
 
 
-## Estrutura do Projeto
-
-```
-dataops-mini-lab/
-├── data/
-│   ├── raw/                 # Dados brutos (CSV de entrada)
-│   │   └── orders_2026_03_23.csv
-│   └── curated/             # Dados tratados (uso futuro)
-├── ingestion/
-│   └── load_orders.py       # Script de ingestão e carga
-├── docs/                    # Documentação complementar
-├── warehouse/               # Banco de dados DuckDB
-├── .gitignore
-└── readme.md
-```
-
 
 ## Como Configurar o Ambiente
 
@@ -75,21 +59,7 @@ O script irá:
 
 Exemplo de saída:
 
-```
-Preview of raw data:
-   order_id  customer_id             order_ts  amount     status
-0         1         1001  2026-03-23 08:10:00   55.90  delivered
-1         2         1002  2026-03-23 08:15:00   32.50  delivered
-...
-
-Table 'raw_orders' created successfully.
-
-Aggregated result by status:
-      status  total_orders  total_amount
-0  delivered             6        314.59
-1  cancelled             2        138.40
-2  processing            2        105.00
-```
+<img src="imgs/image.png" alt="Output script">
 
 ## O que o Script Faz
 
