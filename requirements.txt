@@ -3,3 +3,7 @@ faker
 temporalio
 pymongo
 python-dotenv
+duckdb
+pandera
+pyarrow
+tqdm

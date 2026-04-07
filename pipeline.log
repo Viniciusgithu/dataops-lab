@@ -1,0 +1,35 @@
+2026-04-06 20:50:03,823 - data_generator - INFO - INÍCIO - Geração de Dados Sintéticos
+2026-04-06 20:50:03,827 - data_generator - INFO - Gerando dados de 3000 clientes...
+2026-04-06 20:50:05,640 - data_generator - INFO - Salvo arquivo: customers.csv em e:\Projects\dataops-lab\data\raw\customers.csv
+2026-04-06 20:50:05,640 - data_generator - INFO - Gerando dados de 300 produtos...
+2026-04-06 20:50:05,652 - data_generator - INFO - Salvo arquivo: products.csv em e:\Projects\dataops-lab\data\raw\products.csv
+2026-04-06 20:50:05,652 - data_generator - INFO - Gerando dados de 10000 pedidos...
+2026-04-06 20:50:05,994 - data_generator - INFO - Salvo arquivo: orders.csv em e:\Projects\dataops-lab\data\raw\orders.csv
+2026-04-06 20:50:05,994 - data_generator - INFO - Gerando 20000 itens de pedidos (relacionamentos)...
+2026-04-06 20:50:06,319 - data_generator - INFO - Salvo arquivo: order_items.csv em e:\Projects\dataops-lab\data\raw\order_items.csv
+2026-04-06 20:50:06,320 - data_generator - INFO - FIM - Geração de Dados Sintéticos concluída com sucesso.
+2026-04-06 20:52:31,253 - etl_pipeline - INFO - INÍCIO - Processamento Pipeline ETL Batch
+2026-04-06 20:52:31,255 - etl_pipeline - INFO - Extraindo dados da camada RAW (CSV)...
+2026-04-06 20:52:33,577 - etl_pipeline - INFO - Validando schema dos dados estruturados da camada Raw (via Pandera)...
+2026-04-06 20:52:33,952 - etl_pipeline - INFO - Validação do Contrato de Dados concluída com sucesso.
+2026-04-06 20:52:33,976 - etl_pipeline - INFO - Carregando para DuckDB camada Raw e Trusted...
+2026-04-06 20:52:34,422 - etl_pipeline - INFO - Tabelas RAW e TRUSTED carregadas com sucesso.
+2026-04-06 20:52:34,422 - etl_pipeline - INFO - Transformando e cruzando dados para Camada Refined (One Big Table)...
+2026-04-06 20:52:34,686 - etl_pipeline - INFO - Camada Refined OBT criada de forma otimizada com sucesso.
+2026-04-06 20:52:34,687 - etl_pipeline - INFO - FIM - Pipeline ETL concluído com integridade. Total de 20000 linhas analíticas criadas (Refined OBT).
+2026-04-06 20:52:57,710 - analytics_reports - INFO - INÍCIO - Relatórios Analíticos Baseados em SQL
+2026-04-06 20:52:57,710 - analytics_reports - INFO - Conectando ao banco ecommerce.duckdb...
+2026-04-06 20:52:57,730 - analytics_reports - INFO - Executando >> 1. Faturamento Total por Mês
+2026-04-06 20:52:57,907 - analytics_reports - INFO - Executando >> 2. Faturamento por Categoria
+2026-04-06 20:52:57,913 - analytics_reports - INFO - Executando >> 3. Quantidade de Pedidos por Estado
+2026-04-06 20:52:57,924 - analytics_reports - INFO - Executando >> 4. Ticket Médio por Cliente (Amostra Top 20)
+2026-04-06 20:52:57,946 - analytics_reports - INFO - Executando >> 5. Top 10 Produtos Mais Vendidos
+2026-04-06 20:52:57,955 - analytics_reports - INFO - FIM - Execução das Queries finalizadas.
+2026-04-06 20:55:05,899 - analytics_reports - INFO - INÍCIO - Relatórios Analíticos Baseados em SQL
+2026-04-06 20:55:05,900 - analytics_reports - INFO - Conectando ao banco ecommerce.duckdb...
+2026-04-06 20:55:05,919 - analytics_reports - INFO - Executando >> 1. Faturamento Total por Mês
+2026-04-06 20:55:05,946 - analytics_reports - INFO - Executando >> 2. Faturamento por Categoria
+2026-04-06 20:55:05,953 - analytics_reports - INFO - Executando >> 3. Quantidade de Pedidos por Estado
+2026-04-06 20:55:05,968 - analytics_reports - INFO - Executando >> 4. Ticket Médio por Cliente (Amostra Top 20)
+2026-04-06 20:55:05,996 - analytics_reports - INFO - Executando >> 5. Top 10 Produtos Mais Vendidos
+2026-04-06 20:55:06,008 - analytics_reports - INFO - FIM - Execução das Queries finalizadas.
